@@ -1,0 +1,40 @@
+{
+    "quizId" : "1244",
+    "title" : "What pizza are you?",
+    "subtitle" : "This quiz isn't cheesy or anything else..",
+    "content" : [
+        {
+            "id" : 0,
+            "text" : "Pick a vacation destination",
+            "questions" : [
+                {
+                    "text" : "Bali",
+                    "image" : "https://unsplash.com/photos/OOTEpsO2eV0",
+                    "alt" : "Photo of Klungkung",
+                    "credit" : "Alexa West"
+
+                },
+                {
+                    "text" : "Costa Rica",
+                    "image" : "https://unsplash.com/photos/4jgWVpKHO_4",
+                    "alt" : "Photo of Beach",
+                    "credit" : "Atanas Malamov"
+
+                },
+                {
+                    "text" : "Hong Kong",
+                    "image" : "https://unsplash.com/photos/YmvYdFU4LvE",
+                    "alt" : "Photo of Cityscape",
+                    "credit" : "Sebastian Goldberg"
+
+                },
+                {
+                    "text" : "Hawaii",
+                    "image" : "https://unsplash.com/photos/nlyWZtWTzCo",
+                    "alt" : "Photo of Northern Beaches",
+                    "credit" : "Luke McKeown"
+                }
+            ]
+        }
+    ]
+}
