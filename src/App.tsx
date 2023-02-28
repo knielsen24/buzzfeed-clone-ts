@@ -20,19 +20,14 @@ const App = () => {
         fetchData();
     }, []);
 
-    console.log(quiz)
+    console.log(quiz?.content);
 
     return (
         <div className="App">
-            <>
-                <Title title={quiz?.title} subtitle={quiz?.subtitle} />
-                {quiz?.content.map((content: Content, id: Content["id"]) => {
-                    <QuestionsBlock
-                        key={id}
-                        quizItem={content}
-                    />;
-                })}
-            </>
+            <Title title={quiz?.title} subtitle={quiz?.subtitle} />
+            {quiz?.content.map((content: Content, id: Content["id"]) => (
+                <QuestionsBlock key={id} quizItem={content} />
+            ))}
         </div>
     );
 };
