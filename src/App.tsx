@@ -20,8 +20,6 @@ const App = () => {
         fetchData();
     }, []);
 
-    console.log(quiz?.content);
-
     return (
         <div className="App">
             <Title title={quiz?.title} subtitle={quiz?.subtitle} />
