@@ -3,12 +3,16 @@ import QuestionBlock from "./QuestionBlock";
 
 const QuestionsBlock = ({
     quizItem,
+    chosenAnswerItems,
     setChosenAnswerItems,
-    setUnansweredQuestionsIds
+    setUnansweredQuestionsIds,
+    unansweredQuestionsIds,
 }: {
     quizItem: Content;
+    chosenAnswerItems: string[];
     setChosenAnswerItems: Function;
-    setUnansweredQuestionsIds: Function
+    setUnansweredQuestionsIds: Function;
+    unansweredQuestionsIds: number[] | undefined;
 }) => {
     return (
         <>
@@ -19,9 +23,12 @@ const QuestionsBlock = ({
                 {quizItem?.questions.map((question: Question, _index) => (
                     <QuestionBlock
                         key={_index}
+                        quizItemId={quizItem.id}
                         question={question}
                         setChosenAnswerItems={setChosenAnswerItems}
+                        chosenAnswerItems={chosenAnswerItems}
                         setUnansweredQuestionsIds={setUnansweredQuestionsIds}
+                        unansweredQuestionsIds={unansweredQuestionsIds}
                     />
                 ))}
             </div>

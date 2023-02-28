@@ -2,7 +2,7 @@ import React from 'react'
 
 const AnswerBlock = () => {
   return (
-    <div>AnswerBlock</div>
+    <div className='answer-block'>AnswerBlock</div>
   )
 }
 
