@@ -1,16 +1,27 @@
 import { Content, Question } from "../../interfaces";
 import QuestionBlock from "./QuestionBlock";
 
-const QuestionsBlock = ({ quizItem }: { quizItem: Content }) => {
-    console.log(quizItem);
+const QuestionsBlock = ({
+    quizItem,
+    setChosenAnswerItems,
+    setUnansweredQuestionsIds
+}: {
+    quizItem: Content;
+    setChosenAnswerItems: Function;
+    setUnansweredQuestionsIds: Function
+}) => {
     return (
         <>
-            <h2 id={String(quizItem.id)}>{quizItem.title}</h2>
+            <h2 className="title-block" id={String(quizItem.id)}>
+                {quizItem.title}
+            </h2>
             <div className="questions-container">
-                {quizItem?.questions.map((question : Question, _index) => (
+                {quizItem?.questions.map((question: Question, _index) => (
                     <QuestionBlock
                         key={_index}
                         question={question}
+                        setChosenAnswerItems={setChosenAnswerItems}
+                        setUnansweredQuestionsIds={setUnansweredQuestionsIds}
                     />
                 ))}
             </div>

@@ -5,6 +5,10 @@ import QuestionsBlock from "./components/QuestionsBlock";
 
 const App = () => {
     const [quiz, setQuiz] = useState<QuizData | null>();
+    const [chosenAnswerItems, setChosenAnswerItems] = useState<string[]>([]);
+    const [unansweredQuestionsIds, setUnansweredQuestionsIds] = useState<number[]>([])
+
+    console.log(chosenAnswerItems)
 
     const fetchData = async () => {
         try {
@@ -21,10 +25,16 @@ const App = () => {
     }, []);
 
     return (
-        <div className="App">
+        <div className="app">
             <Title title={quiz?.title} subtitle={quiz?.subtitle} />
             {quiz?.content.map((content: Content, id: Content["id"]) => (
-                <QuestionsBlock key={id} quizItem={content} />
+                <QuestionsBlock
+                    key={id}
+                    quizItem={content}
+                    setChosenAnswerItems={setChosenAnswerItems}
+                    setUnansweredQuestionsIds={setUnansweredQuestionsIds}
+
+                />
             ))}
         </div>
     );

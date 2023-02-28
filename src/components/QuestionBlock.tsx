@@ -1,14 +1,23 @@
 import { Question } from "../../interfaces";
 
-const QuestionBlock = ({ question }: { question: Question }) => {
-    // const handleClick = () => {};
+const QuestionBlock = ({
+    question,
+    setChosenAnswerItems,
+    setUnansweredQuestionsIds,
+}: {
+    question: Question;
+    setChosenAnswerItems: Function;
+    setUnansweredQuestionsIds: Function;
+}) => {
+    const handleClick = () => {
+        setChosenAnswerItems((prevState: string[]) => [
+            ...prevState,
+            question.text,
+        ]);
+    };
 
-    console.log(question.image)
     return (
-        <button
-            className="question-block"
-            // onclick={handleClick}
-        >
+        <button className="question-block" onClick={handleClick}>
             <img src={question.image} alt={question.alt} />
             <h3>{question.text}</h3>
             <p>
