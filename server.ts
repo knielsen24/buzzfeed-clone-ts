@@ -22,7 +22,7 @@ app.get("/quiz-item", async (req: Request, res: Response) => {
         );
         if (response.status === 200) {
             const quizItem: QuizData = await response.data.data[
-                "e6f66b1c-0c9a-4e90-a185-1cc6df3f6b0a"
+                "58fe7ecc-b642-4c0c-a0d0-6c414dee73f9"
             ];
             res.setHeader(
                 "Access-Control-Allow-Origin",

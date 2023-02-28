@@ -5,7 +5,7 @@
     "content": [
         {
             "id": 0,
-            "text": "Pick a vacation destination",
+            "title": "Pick a vacation destination",
             "questions": [
                 {
                     "text": "Bali",

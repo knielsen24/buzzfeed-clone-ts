@@ -1,9 +1,11 @@
-import React from 'react'
+import { Content } from "../../interfaces";
 
-const QuestionsBlock = () => {
-  return (
-    <div>QuestionsBlock</div>
-  )
-}
+const QuestionsBlock = ({ quizItem }: { quizItem: Content }) => {
+    return (
+        <>
+            <h2 id={String(quizItem.id)}>{quizItem.title}</h2>
+        </>
+    );
+};
 
-export default QuestionsBlock
+export default QuestionsBlock;
